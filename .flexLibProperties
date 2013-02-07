@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.danielporfirio.switchblade.query.ExpressionQuery"/>
+    <classEntry path="com.danielporfirio.switchblade.query.Operator"/>
+    <classEntry path="com.danielporfirio.switchblade.query.WhereQuery"/>
+    <classEntry path="com.danielporfirio.linq.DistinctIterator"/>
+    <classEntry path="com.danielporfirio.linq.SkipIterator"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
