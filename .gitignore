@@ -1,11 +1,31 @@
-# Build and Release Folders
-/bin/
-/bin-debug/
-/bin-release/
+# Project build and release directories
+target/
+bin/
+bin-debug/
+bin-release/
 
-# Other files and folders
-/.settings/
+# Intellij IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.DS_Store
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Eclipse/Flex/Flash Builder project files
+.actionScriptProperties
+.flexProperties
+.flexLibProperties
+.settings/
+.project
+.classpath
+
+# Maven release plugin files
+pom.xml.releaseBackup
+release.properties
+
+# mvn site:stage bug
+home/
+
+# Mac
+.DS_Store
+
