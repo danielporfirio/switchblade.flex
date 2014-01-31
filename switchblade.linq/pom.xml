@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" >
+
+	<modelVersion >4.0.0</modelVersion >
+
+	<!-- Prefixo da estrutura do pacotes -->
+	<groupId >br.com.img.switchblade</groupId >
+	<!-- Define qual é o nome do artefato final -->
+	<artifactId >switchblade.flex</artifactId >
+	<!-- Versao do artefato -->
+	<version >1.0.0</version >
+	<!-- Extensão do artefato -->
+	<packaging >swc</packaging >
+	<!-- Nome do artefato -->
+	<name >Switchblade for flex</name >
+
+	<properties >
+		<flex.sdk.version >3.5.0.12683</flex.sdk.version >
+		<flexmojos.version >3.6.1</flexmojos.version >
+	</properties >
+
+	<build >
+		<sourceDirectory >src</sourceDirectory >
+		<testSourceDirectory >tests</testSourceDirectory >
+		<plugins >
+			<plugin >
+				<groupId >org.sonatype.flexmojos</groupId >
+				<artifactId >flexmojos-maven-plugin</artifactId >
+				<version >${flexmojos.version}</version >
+				<extensions >true</extensions >
+				<configuration >
+					<testRunner >
+						<launcher >
+							<flashplayerCommand >${flashPlayer.command}</flashplayerCommand >
+						</launcher >
+					</testRunner >
+					<headlessServer >true</headlessServer >
+					<verboseStacktraces >true</verboseStacktraces >
+					<includeTestFiles >
+						<includeTestFile >*Test.as</includeTestFile >
+					</includeTestFiles >
+				</configuration >
+				<dependencies >
+					<dependency >
+						<groupId >com.adobe.flex</groupId >
+						<artifactId >compiler</artifactId >
+						<version >${flex.sdk.version}</version >
+						<type >pom</type >
+					</dependency >
+				</dependencies >
+			</plugin >
+		</plugins >
+	</build >
+
+	<dependencies >
+		<dependency >
+			<groupId >com.adobe.flex.framework</groupId >
+			<artifactId >flex-framework</artifactId >
+			<version >${flex.sdk.version}</version >
+			<type >pom</type >
+		</dependency >
+		<dependency >
+		<!-- framework de teste -->
+			<groupId >com.adobe.flexunit</groupId >
+			<artifactId >flexunit</artifactId >
+			<version >4.0-rc-1</version >
+			<type >swc</type >
+			<scope >test</scope >
+		</dependency >
+	</dependencies >
+
+	<!-- Flexmojos fornece suporte para que aplicações Flex e AIR sejam compilada com Apache Maven. Ele permite que o Maven possa compilar, otimizar e testar Flex SWF, Flex SWC, Ar SWF e Air SWC. -->
+	<repositories >
+		<repository >
+			<id >flex-mojos-repository</id >
+			<url >http://repository.sonatype.org/content/groups/flexgroup</url >
+			<releases >
+				<enabled >true</enabled >
+			</releases >
+			<snapshots >
+				<enabled >false</enabled >
+			</snapshots >
+		</repository >
+	</repositories >
+	<pluginRepositories >
+		<pluginRepository >
+			<id >flex-mojos-plugin-repository</id >
+			<url >http://repository.sonatype.org/content/groups/flexgroup</url >
+			<releases >
+				<enabled >true</enabled >
+			</releases >
+			<snapshots >
+				<enabled >false</enabled >
+			</snapshots >
+		</pluginRepository >
+	</pluginRepositories >
+</project >

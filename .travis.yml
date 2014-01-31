@@ -1,0 +1,5 @@
+language: objective-c
+before_script:
+  - curl 'http://fpdownload.macromedia.com/pub/flashplayer/updaters/10/flashplayer_10_sa_debug.app.zip' >> ./switchblade.linq/flashplayer.zip
+  - unzip ./switchblade.linq/flashplayer.zip -d ./switchblade.linq/
+script: mvn -f ./switchblade.linq/pom.xml test -DflashPlayer.command=Flash\ Player\ Debugger.app/Contents/MacOS/Flash\ Player\ Debugger -X
