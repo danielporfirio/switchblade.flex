@@ -3,6 +3,8 @@ target/
 bin/
 bin-debug/
 bin-release/
+Flash Player Debugger.app/
+flashplayer.zip
 
 # Intellij IDEA project files
 .idea/
